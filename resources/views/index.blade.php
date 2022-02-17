@@ -21,6 +21,12 @@
         </style>
     </head>
     <body class="antialiased">
-        
+        <table border='1'><tr><th>Order ID</th><th>Comments</th><th>Classification</th><th>Expected Delivery</th></tr>
+            @foreach ($comments as $comment)
+            {
+                <tr><td>{{ $comment['orderid'] }}</td><td style='text-align:center'>{{ $comment['comments'] }}</td><td>{{ $comment['classification'] }}</td><td>{{ $comment['date'] }}</td></tr>
+            }
+            @endforeach
+        </table>
     </body>
 </html>

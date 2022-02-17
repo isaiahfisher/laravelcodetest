@@ -13,6 +13,7 @@ class IndexController extends Controller
         IF((comments LIKE '%candy%' OR comments LIKE '%smarties%'), 'candy', IF((comments LIKE '%call%' OR comments LIKE '%contact%'), 'contact preferences', 
         IF((comments LIKE '%signature%' OR comments LIKE '%sign%'), 'Delivery Signature', IF(comments LIKE '%referred%', 'referrals', 'Miscellaneous')))) AS classification"
         )->orderBy('classification')->get();
-        return view('index')->with('reportData', $reportData);
+
+        return view('index')->with('comments', $comments);
     }
 }
