@@ -19,6 +19,12 @@ Display the comments and group them into the following sections based on what th
 
 The shipdate_expected field is currently populated with no date (0000-00-00). Some of comments included an "Expected Ship Date" in the text. Please parse out the date from the text and properly update the shipdate_expected field in the table
 
+__This task has been accomplished via implementing a command line tool for Artisan__
+
+- __USAGE:__ Artisan fix:dates
+- __DESCRIPTION:__ This command searches the Order Info records for comments containing expected shipping dates and sets the shipdate_expected column for each record.
+- __DOCUMENTATION:__ This command, along with the description, will show up when issuing the Artisan list command
+
 
 ## How you'll build it
 
